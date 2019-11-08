@@ -29,9 +29,9 @@ def main_function():
         print(f'Wiping {disk}...')
         for i in range(int(count_sel)):
             os.system(
-                f'dd if=/dev/urandom of={disk} bs=512 status=progress')
+                f'dd if=/dev/urandom of={disk} bs=512')
         os.system(
-            f'dd if=/dev/zero of={disk} bs=512 status=progress')
+            f'dd if=/dev/zero of={disk} bs=512')
         print(f'Done with {disk}')
     return 0
 

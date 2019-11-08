@@ -37,6 +37,7 @@ def main_function():
 
 
 def signal_handler(sig, frame):
+    global abort_count
     if abort_count < 5:
         abort_count += 1
     else:

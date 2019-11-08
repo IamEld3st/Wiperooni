@@ -24,7 +24,7 @@ def main_function():
 
     disk_sel = input(
         'Which disks to erase? (separate multiple drives with , Eg: /dev/sda,/dev/sdb,...)\n> ')
-    disks = disk_sel.rstrip().split(',')
+    disks = disk_sel.rstrip().split(',') if "," in disk_sel else [disk_sel]
     for disk in disks:
         print(f'Wiping {disk}...')
         for i in range(int(count_sel)):
